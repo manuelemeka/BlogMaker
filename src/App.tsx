@@ -25,7 +25,7 @@ function App() {
 
   const renderAddButton = () => {
     if (content.length > 0) {
-      return <img src={addIcon} className="add" alt="add" />;
+      return <img src={addIcon} className="add" alt="add"/>;
     }
     return null;
   };

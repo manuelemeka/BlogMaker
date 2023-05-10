@@ -10,24 +10,24 @@ interface TextInputProps {
 }
 
 const TextInput = ({ placeholder, fontSize, fontWeight, onClick, onChange }: TextInputProps) => {
-    const inputStyle = {
-        fontWeight: fontWeight || 'bold',
-        fontSize: fontSize || '16px',
-    };
+  const inputStyle = {
+    fontWeight: fontWeight || 'bold',
+    fontSize: fontSize || '16px',
+  };
 
-    const handleClick = () => {
-        if (onClick) {
-          onClick();
-        }
-    };
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-      if (onChange) {
-        onChange(event);
-      }
-    };
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(event);
+    }
+  };
     
-    return <input type="text" placeholder={placeholder} className="textInput" style={inputStyle} onClick={handleClick} onChange={handleChange}/>;
+  return <input type="text" placeholder={placeholder} className="textInput" style={inputStyle} onClick={handleClick} onChange={handleChange}/>;
 };
 
 export default TextInput;
