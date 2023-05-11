@@ -50,16 +50,6 @@ function Editor() {
     quillInstance.insertEmbed(index, type, value);
   };
 
-  const insertVidoEmbed = (type: string, value: string) => {
-    const quillInstance = quillRef.current?.getEditor();
-    if (!quillInstance) return;
-
-    const index = selectionRange
-      ? selectionRange.index
-      : quillInstance.getLength() || 0;
-    quillInstance.insertEmbed(index, "video", value);
-  };
-
   const renderAddButton = () => {
     return (
       <>
@@ -70,7 +60,7 @@ function Editor() {
           anchorEl={anchorEl}
           onClose={handleMenuClose}
           insertEmbed={insertEmbed}
-          insertVidoEmbed={insertVidoEmbed}
+          insertVidoEmbed={insertEmbed}
         />
       </>
     );
