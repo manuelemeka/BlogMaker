@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import './App.css';
 import TextInput from './component/Input/TextInput';
 import Toolbar from './component/Toolbar/Toolbar';
-import addIcon from './assets/add.svg';
+import { IconButton } from '@mui/material';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import MenuComponent from './component/Menu/MenuComponent';
 
 function App() {
   const [textInputClicked, setTextInputClicked] = useState(false);
   const [content, setContent] = useState('');
-
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  
   const handleTextInputClick = () => {
     setTextInputClicked(true);
   };
@@ -16,19 +19,39 @@ function App() {
     setContent(event.target.value);
   };
 
+  const handleButtonClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   const renderToolbar = () => {
     if (textInputClicked) {
       return <Toolbar />;
     }
     return null;
-  };
+  }; 
 
   const renderAddButton = () => {
     if (content.length > 0) {
-      return <img src={addIcon} className="add" alt="add"/>;
+      return (
+        <>
+          <IconButton
+            color="primary"
+            onClick={handleButtonClick}
+            style={{ fontSize: 40, color: '#000' }}
+          >
+            <AddCircleOutlineIcon />
+          </IconButton>
+          <MenuComponent anchorEl={anchorEl} onClose={handleMenuClose} />
+        </>
+      );
     }
     return null;
   };
+
 
   return (
     <div className="App">

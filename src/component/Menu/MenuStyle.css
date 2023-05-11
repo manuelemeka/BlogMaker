@@ -1,0 +1,28 @@
+.menu-paper {
+    width: 350px;
+}
+
+.menu-header {
+    padding: 8px 16px;
+    font-weight: '700';
+    font-size: 14px;
+}
+
+.menu-primary {
+    display: flex;
+    flex-direction: column;
+}
+  
+.list {
+    margin-bottom: 10px;
+}
+
+.menu-subtext-small {
+    font-size: 12px;
+}
+
+.menu-text {
+    font-weight: bold;
+    font-size: 16px;
+}
+  
