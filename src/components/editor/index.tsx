@@ -1,6 +1,5 @@
 import AddIcon from "@mui/icons-material/Add";
-import { Box, Button, Divider, Grid } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
+import { Box, Divider, IconButton } from "@mui/material";
 import { RangeStatic, Sources } from "quill";
 import { useRef, useState } from "react";
 import ReactQuill, { UnprivilegedEditor } from "react-quill";
@@ -90,14 +89,6 @@ function Editor() {
 
         <Box sx={style.footer}>0/1000 words</Box>
       </Box>
-
-      <Grid container spacing={2}>
-        <Grid item xs={12} sx={style.button}>
-          <Button variant="contained" color="success">
-            Post
-          </Button>
-        </Grid>
-      </Grid>
     </>
   );
 }

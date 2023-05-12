@@ -1,5 +1,3 @@
-const colors = ["red", "green", "blue", "orange", "violet"];
-
 export interface FormatData {
   className: string;
   options?: string[];

@@ -74,7 +74,7 @@ const PhotoUpload: React.FC<PhotoUploadProps> = ({
                 : { textTransform: "none", backgroundColor: "#fff" }
             }
           >
-            {imageUrl === "" ? "upload image from device" : "change image"}
+            {imageUrl === "" ? "Import Image from Device" : "Change Image"}
           </Button>
         </label>
       </Box>

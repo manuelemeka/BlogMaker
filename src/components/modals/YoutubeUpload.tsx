@@ -42,21 +42,21 @@ const YoutubeUpload: React.FC<YoutubeUploadProps> = ({
       </Typography>
       <Box sx={{ mt: 2 }}>
         <FormControl fullWidth>
-          <Typography sx={{ mb: 1, fontSize: 12 }}>Video Provider</Typography>
+          <Typography sx={{ mb: 1, fontSize: 12 }}>VIDEO PROVIDER</Typography>
           <Select
             value={"Youtube"}
-            sx={{ backgroundColor: "#FAFAFA" }}
+            sx={style.selectColor}
             size="small"
           >
             <MenuItem value={"Youtube"}>Youtube</MenuItem>
           </Select>
         </FormControl>
         <FormControl fullWidth sx={{ mt: 3 }}>
-          <Typography sx={{ mb: 1, fontSize: 12 }}>Url</Typography>
+          <Typography sx={{ mb: 1, fontSize: 12 }}>URL</Typography>
           <OutlinedInput
             type="text"
             size="small"
-            sx={{ backgroundColor: "#FAFAFA" }}
+            sx={style.selectColor}
             onChange={(e) => setYoutubeUrl(e.target.value)}
           />
         </FormControl>
